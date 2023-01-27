@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faDroplet, faLocationDot, faMagnifyingGlass, faWind } from '@fortawesome/free-solid-svg-icons'
-
+import ReactCountryFlag from "react-country-flag"
 
 export default function Home() {
   return (
@@ -19,12 +19,12 @@ export default function Home() {
         {/*85ada20ccacae8d4b403694291e77737 https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=85ada20ccacae8d4b403694291e77737 */}
       </Head>
 
-      <main className={styles.main}>
+      <main className="main">
 
-        <div className={styles.container}>
-          <div className={styles.form}>
+        <div className="container">
+          <div className="form">
             <h1>Check the weather of a city!</h1>
-            <div className={styles.form_input_container}>
+            <div className="form_input_container">
               <input type="text"
               placeholder="Type the name of the city"
               id="city-input" 
@@ -38,22 +38,22 @@ export default function Home() {
           </div>
 
           <div id="weather-data">
-            <h2><FontAwesomeIcon icon={faLocationDot}/> 
+            <h2><FontAwesomeIcon icon={faLocationDot} className="icon"/> 
               <span id="city">Maceió</span>
-              <img src="" id ="country" alt="flag country" />
+              <ReactCountryFlag countryCode="USi" />
             </h2>
             <p id="temperature"> <span>38</span>&deg;C</p>
             <div id="description-container">
               <p id="description">Nublado</p>
-              <img src="" alt="weather now" id="weather-icon" />
+              <img src="https://countryflagsapi.com/png/alb" alt="weather now" id="weather-icon" />
             </div>
             <div id="details-container">
               <p id="umidity">
-              <FontAwesomeIcon icon={faDroplet}/>
+              <FontAwesomeIcon icon={faDroplet} className="icon"/>
               <span>48%</span>
               </p>
               <p id="wind">
-              <FontAwesomeIcon icon={faWind}/>
+              <FontAwesomeIcon icon={faWind} className="icon"/>
               <span>3km/h</span>
               </p>
 
