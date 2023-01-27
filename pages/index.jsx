@@ -13,10 +13,29 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        {/*85ada20ccacae8d4b403694291e77737 https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=85ada20ccacae8d4b403694291e77737 */}
       </Head>
 
       <main className={styles.main}>
+
+        <div className={styles.container}>
+          <div className={styles.form}>
+            <h1>Check the weather of a city!</h1>
+            <div className={styles.form_input_container}>
+              <input type="text"
+              placeholder="Type the name of the city"
+              id="city-input" 
+              />
+              <button id="search">
+                <i classNames={styles.fa_solid}></i>
+
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
